@@ -1,6 +1,6 @@
-# 👩🏾‍💻 Gifty Acquah — CFG Data Science & ML Assignments
+#  Gifty Acquah — CFG Data Science & ML Assignments
 
-## 🙋🏾‍♀️ About Me
+## About Me
 
 Hi! I'm **Gifty Acquah**, a PhD Candidate in Information Systems Engineering 
 at **Concordia University**, researching cybersecurity and AI for critical 
@@ -9,7 +9,7 @@ infrastructure protection. I am also a Data Science & ML student with
 
 ---
 
-## 🚀 Previous Projects & Experience
+##  Previous Projects & Experience
 
 | Project | Description | Tools Used |
 |---|---|---|
@@ -20,7 +20,7 @@ infrastructure protection. I am also a Data Science & ML student with
 
 ---
 
-## 🎯 What I'll Use This Repository For
+## What I'll Use This Repository For
 
 This repository — **CFG-Assignments** — will store all my work for the 
 CFG Foundation Module, including:
@@ -32,7 +32,7 @@ CFG Foundation Module, including:
 
 ---
 
-## 🛠️ Git Commands I Used in This Assignment
+## Git Commands I Used in This Assignment
 
 ### Checking status
 ```bash
@@ -71,7 +71,7 @@ git merge feature/add-project-files
 
 ---
 
-## 📄 About .gitignore
+##  About .gitignore
 
 A `.gitignore` file tells Git which files and folders to **ignore** and 
 **not track**. This is useful for:
@@ -82,7 +82,7 @@ A `.gitignore` file tells Git which files and folders to **ignore** and
 
 ---
 
-## 📦 About requirements.txt
+##  About requirements.txt
 
 A `requirements.txt` file lists all the **Python packages and dependencies** 
 needed to run the project. This allows anyone who clones the repository to 
@@ -93,11 +93,11 @@ pip install -r requirements.txt
 
 ---
 
-## 🌍 Community & Mentorship
+##  Community & Mentorship
 
 Alongside my studies, I am the founder of:
-- 🖥️ **Creative Brains** — mentoring 100+ students in coding and cybersecurity
-- 👩🏾‍💻 **Black Girls in Tech** — supporting women in technology across Africa 
+-  **Creative Brains** — mentoring 100+ students in coding and cybersecurity
+-  **Black Girls in Tech** — supporting women in technology across Africa 
 and internationally
 
 > *"If I made it, you can make it too."*
