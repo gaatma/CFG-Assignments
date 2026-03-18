@@ -51,7 +51,7 @@ git add .
 
 ### Adding commits with meaningful messages
 ```bash
-git commit -m "Add .gitignore and requirements.txt with explanations"
+git commit -m "Add .gitignore and project_requirements.txt with explanations"
 ```
 
 ### Opening a pull request
@@ -103,11 +103,11 @@ A `.gitignore` file tells Git which files and folders to **ignore** and
 
 ## About requirements.txt
 
-A `requirements.txt` file lists all the **Python packages and dependencies** 
+A `project_requirements.txt` file lists all the **Python packages and dependencies** 
 needed to run the project. This allows anyone who clones the repository to 
 install everything they need by running:
 ```bash
-pip install -r requirements.txt
+pip install -r project_requirements.txt
 ```
 
 ---
