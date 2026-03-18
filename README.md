@@ -1,4 +1,4 @@
-#  Gifty Acquah — CFG Data Science & ML Assignments
+# Gifty Acquah — CFG Data Science & ML Assignments
 
 ## About Me
 
@@ -9,7 +9,7 @@ infrastructure protection. I am also a Data Science & ML student with
 
 ---
 
-##  Previous Projects & Experience
+## Previous Projects & Experience
 
 | Project | Description | Tools Used |
 |---|---|---|
@@ -51,27 +51,46 @@ git add .
 
 ### Adding commits with meaningful messages
 ```bash
-git commit -m "Add initial project files and README"
+git commit -m "Add .gitignore and requirements.txt with explanations"
 ```
 
 ### Opening a pull request
-> Done via GitHub UI — see screenshot below
+> Done via GitHub UI — see screenshots below ⬇️
 
 ### Merging to main branch
-```bash
-git checkout main
-git merge feature/add-project-files
-```
+> Done via GitHub UI — see screenshots below ⬇️
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-*(Add your screenshots here as you go — see instructions below)*
+### 1. Checking git status — clean branch
+![git status clean](screenshots/1-git-status-clean.png)
+
+### 2. Creating a new branch
+![create branch](screenshots/2-create-branch.png)
+
+### 3. git status — untracked files in red
+![untracked files](screenshots/3-git-status-untracked.png)
+
+### 4. git status — files added in green
+![files added](screenshots/4-git-status-added.png)
+
+### 5. git commit with meaningful message
+![git commit](screenshots/5-git-commit.png)
+
+### 6. git push branch to GitHub
+![git push](screenshots/6-git-push.png)
+
+### 7. Pull request opened on GitHub
+![pull request](screenshots/7-pull-request.png)
+
+### 8. Pull request merged
+![merged](screenshots/8-merged.png)
 
 ---
 
-##  About .gitignore
+## About .gitignore
 
 A `.gitignore` file tells Git which files and folders to **ignore** and 
 **not track**. This is useful for:
@@ -82,7 +101,7 @@ A `.gitignore` file tells Git which files and folders to **ignore** and
 
 ---
 
-##  About requirements.txt
+## About requirements.txt
 
 A `requirements.txt` file lists all the **Python packages and dependencies** 
 needed to run the project. This allows anyone who clones the repository to 
@@ -93,86 +112,14 @@ pip install -r requirements.txt
 
 ---
 
-##  Community & Mentorship
+## Community & Mentorship
 
 Alongside my studies, I am the founder of:
--  **Creative Brains** — mentoring 100+ students in coding and cybersecurity
--  **Black Girls in Tech** — supporting women in technology across Africa 
+
+- **Creative Brains** — mentoring 100+ students in coding and cybersecurity
+- **Black Girls in Tech** — supporting women in technology across Africa 
 and internationally
 
 > *"If I made it, you can make it too."*
 
 ---
-*Last updated: March 2026*
-```
-
----
-
-## Step 3 — Create Your Branch and Files
-
-After saving the README, go to your repository and follow these steps:
-
-**Create a new branch:**
-1. Click the branch dropdown that says **"main"**
-2. Type **feature/add-project-files**
-3. Click **"Create branch"**
-
-**Create .gitignore file:**
-1. Make sure you are on your new branch
-2. Click **"Add file"** → **"Create new file"**
-3. Name it: `.gitignore`
-4. Paste this content:
-```
-# Python
-__pycache__/
-*.py[cod]
-*.env
-.env
-
-# Jupyter Notebooks
-.ipynb_checkpoints
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Virtual environments
-venv/
-env/
-```
-5. In the commit message box type: `Add .gitignore to exclude unnecessary files`
-6. Select **"Commit directly to feature/add-project-files branch"**
-7. Click **"Commit changes"**
-
-**Create requirements.txt file:**
-1. Click **"Add file"** → **"Create new file"**
-2. Name it: `requirements.txt`
-3. Paste this content:
-```
-# Python packages required for CFG Data Science & ML assignments
-# Install all dependencies with: pip install -r requirements.txt
-
-numpy
-pandas
-matplotlib
-scikit-learn
-jupyter
-```
-4. Commit message: `Add requirements.txt with core data science dependencies`
-5. Commit to the **feature/add-project-files** branch
-
----
-
-## Step 4 — Open a Pull Request
-
-1. After committing, GitHub will show a yellow banner saying **"Compare & pull request"** — click it
-2. Title: `Add project files: .gitignore and requirements.txt`
-3. In the description write:
-```
-## What this PR adds
-- .gitignore to exclude unnecessary and sensitive files from version control
-- requirements.txt listing core Python dependencies for the course
-
-## Why
-Good practice for any Python/Data Science project to include these files 
-from the start.
