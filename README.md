@@ -117,8 +117,8 @@ pip install -r project_requirements.txt
 Alongside my studies, I am the founder of:
 
 - **Creative Brains** — mentoring 100+ students in coding and cybersecurity
-- **Black Girls in Tech** — supporting women in technology across Africa 
-and internationally
+- **Odontwe Hope Foundation** — giving hope, support, and opportunities to children facing extreme hardship by providing basic needs, 
+mentorship, and access to education so they can rise beyond their circumstances and achieve their full potential
 
 > *"If I made it, you can make it too."*
 
