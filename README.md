@@ -2,7 +2,7 @@
 
 ## About Me
 
-Hi! I'm **Gifty Acquah**, a PhD Candidate in Information Systems Engineering 
+I'm **Gifty Acquah**, a PhD Candidate in Information Systems Engineering 
 at **Concordia University**, researching cybersecurity and AI for critical 
 infrastructure protection. I am also a Data Science & ML student with 
 **Code First Girls (CFG)**.
