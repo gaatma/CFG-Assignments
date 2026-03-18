@@ -25,10 +25,10 @@ infrastructure protection. I am also a Data Science & ML student with
 This repository — **CFG-Assignments** — will store all my work for the 
 CFG Foundation Module, including:
 
-- ✅ Git & GitHub assignment (Assignment 1)
-- 📊 Data Science notebooks
-- 🤖 Machine Learning projects
-- 📝 Notes and resources
+- Git & GitHub assignment (Assignment 1)
+- Data Science notebooks
+- Machine Learning projects
+- Notes and resources
 
 ---
 
