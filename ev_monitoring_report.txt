@@ -1,8 +1,8 @@
 ============================================================
-  EV CHARGING STATION ENVIRONMENT MONITOR — REPORT
+  EV CHARGING STATION ENVIRONMENT MONITOR - REPORT
 ============================================================
-  Generated: 2026-03-29 14:42:18
-  Author: Gifty Acquah — CFG Data Science & ML
+  Generated: 2026-03-29 15:02:14
+  Author: Gifty Acquah - CFG Data Science & ML
 ============================================================
 
 ISS REMOTE INFRASTRUCTURE STATUS
@@ -27,13 +27,13 @@ EV CHARGING LOCATION REPORTS
 ----------------------------------------
 
   Location: Montreal
-  Temperature: 1C
-  Humidity: 75%
-  Wind Speed: 15 km/h
-  Conditions: Overcast
+  Temperature: 4C
+  Humidity: 60%
+  Wind Speed: 16 km/h
+  Conditions: Partly cloudy
   EV Charging Status: SAFE
   Details:
-    - l environmental parameters within safe operating range
+    - All environmental parameters within safe operating range
 
   Location: Toronto
   Temperature: 10C
@@ -42,4 +42,4 @@ EV CHARGING LOCATION REPORTS
   Conditions: Overcast
   EV Charging Status: SAFE
   Details:
-    - l environmental parameters within safe operating range
+    - All environmental parameters within safe operating range

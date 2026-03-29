@@ -221,10 +221,10 @@ def save_report(results, iss_count, iss_names):
  
     with open(filename, "w") as file:
         file.write("=" * 60 + "\n")
-        file.write("  EV CHARGING STATION ENVIRONMENT MONITOR — REPORT\n")
+        file.write("  EV CHARGING STATION ENVIRONMENT MONITOR - REPORT\n")
         file.write("=" * 60 + "\n")
         file.write(f"  Generated: {timestamp}\n")
-        file.write(f"  Author: Gifty Acquah — CFG Data Science & ML\n")
+        file.write("  Author: Gifty Acquah - CFG Data Science & ML\n")
         file.write("=" * 60 + "\n\n")
  
         # Write ISS section
@@ -256,7 +256,7 @@ def save_report(results, iss_count, iss_names):
             file.write("  Details:\n")
             for reason in reasons:
                 # Use string slicing to remove emoji characters for clean file output
-                clean_reason = reason[2:].strip()
+                clean_reason = clean_reason = reason.strip()
                 file.write(f"    - {clean_reason}\n")
  
     print(f"\n  Report saved to: {filename}")
@@ -373,7 +373,7 @@ def main():
  
     print("\n" + "=" * 60)
     print("  Thank you for using the EV Charging Environment Monitor")
-    print("  Stay safe. Charge smart. ⚡")
+    print("  Stay safe. Charge smart. ")
     print("=" * 60 + "\n")
  
  
