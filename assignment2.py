@@ -1,3 +1,37 @@
+
+# CFG Data Science & ML — Assignment 2: Using APIs in Python
+# -------------------------------------------------------------
+# Author:      Gifty Acquah
+# Date:        March 2026
+# Description: EV Charging Station Environment Monitor
+#              A console application that monitors real-time weather conditions
+#              at EV charging station locations and assesses whether conditions
+#              are SAFE, CAUTION, or DANGER for charging operations.
+#              Also retrieves live ISS astronaut data as a demonstration of
+#              remote infrastructure monitoring — relevant to smart grid and
+#              cyber-physical systems research.
+#
+# APIS USED:
+#   1. Open Notify API (http://api.open-notify.org/astros.json)
+#      - No API key required. Freely accessible.
+#      - Returns the number of people currently aboard the ISS.
+#
+#   2. wttr.in Weather API (https://wttr.in/)
+#      - No API key required. Freely accessible.
+#      - Returns real-time weather data for any city in JSON format.
+#
+# ADDITIONAL MODULE: 'datetime'
+#   - Built into Python, no installation needed.
+#   - Used to timestamp the monitoring report.
+#
+# HOW TO RUN:
+#   1. Make sure Python 3 is installed
+#   2. Install the requests library if not already installed:
+#      pip install requests
+#   3. Run the file:
+#      python assignment2.py
+# ----------------------------------
+
 #imports
 import requests   # For making HTTP requests to APIs
 import datetime   # Additional module — used for timestamping reports (built-in, no install needed)
@@ -12,7 +46,8 @@ WIND_CAUTION = 40          # Above 40 km/h warrants caution
 HUMIDITY_DANGER = 95       # Above 95% humidity risks electrical safety
 
 
-
+# ------------------------------------------------------------------
+# FUNCTION: display_welcome
 # Displays a welcome banner when the program starts
 def display_welcome():
     print("=" * 60)
@@ -23,6 +58,8 @@ def display_welcome():
     print("=" * 60)
     print()
 
+# --------------------------------------------------------------------
+# FUNCTION: get_iss_crew
 # Fetches the current number of astronauts aboard the ISS
 # from the Open Notify API — demonstrates remote infrastructure monitoring
 # Returns: a tuple of (count, names_list) or (None, None) on failure
@@ -41,7 +78,9 @@ def get_iss_crew():
     except Exception as e:
         print(f"  Could not retrieve ISS data: {e}")
         return None, None
-    
+
+# --------------------------------------------------------------------  
+# FUNCTION: get_weather  
 # Fetches real-time weather data for a given city using wttr.in API
 # Parameter: city (string) — the city name to check
 # Returns: a dictionary with weather details, or None on failure
@@ -84,7 +123,10 @@ def get_weather(city):
     except Exception as e:
         print(f"  Could not retrieve weather for {city}: {e}")
         return None
- # Assesses whether weather conditions are SAFE, CAUTION, or DANGER
+
+# --------------------------------------------------------------------  
+# FUNCTION: assess_safety
+# Assesses whether weather conditions are SAFE, CAUTION, or DANGER
 # for EV charging operations based on thresholds
 # Parameter: weather (dictionary) — weather data from get_weather()
 # Returns: a tuple of (status string, list of reasons)
@@ -138,7 +180,8 @@ def assess_safety(weather):
     return status, reasons
 
  
-
+# --------------------------------------------------------------------  
+# FUNCTION: display_weather_report
 # Displays a formatted weather and safety report for a single location
 # Parameter: weather (dictionary), status (string), reasons (list)
 
@@ -165,7 +208,8 @@ def display_weather_report(weather, status, reasons):
         print(f"    {reason}")
  
  
-
+# -------------------------------------------------------------------- 
+# FUNCTION: save_report
 # Writes the full monitoring report to a text file
 # Parameters: results (list of dicts), iss_count, iss_names
 
@@ -220,7 +264,8 @@ def save_report(results, iss_count, iss_names):
  
  
 
-
+# -------------------------------------------------------------------- 
+# FUNCTION: get_user_locations
 # Asks the user to enter EV charging station locations to monitor
 # Returns: a list of city names
 
@@ -249,14 +294,14 @@ def get_user_locations():
     return locations
  
  
-
+# -------------------------------------------------------------------- 
 # MAIN PROGRAM
 
 def main():
     # Display welcome banner
     display_welcome()
  
-    #  Fetch ISS crew data 
+    #  Step 1: Fetch ISS crew data 
     print("   Fetching ISS crew data (remote infrastructure monitoring)...")
     iss_count, iss_names = get_iss_crew()
  
@@ -266,7 +311,7 @@ def main():
             print(f"     {name}")
     print()
  
-    # Get locations from user
+    # Step 2: Get locations from user
     locations = get_user_locations()
  
     # Store results in a list of dictionaries
@@ -276,7 +321,7 @@ def main():
     print("  WEATHER SAFETY ASSESSMENT FOR EV CHARGING LOCATIONS")
     print("=" * 60)
  
-    # --- Step 3: Check weather for each location using a for loop ---
+    # Step 3: Check weather for each location using a for loop
     for city in locations:
         print(f"\n   Checking weather for: {city.title()}...")
         weather = get_weather(city)
@@ -294,7 +339,7 @@ def main():
         else:
             print(f"   Could not retrieve data for {city}. Skipping.")
  
-    #  Summary using inbuilt functions
+    #  Step 4: Summary using inbuilt functions
     if len(results) > 0:
         print("\n" + "=" * 60)
         print("  SUMMARY")
@@ -322,7 +367,7 @@ def main():
         else:
             print("\n   All monitored locations are within acceptable safety parameters.")
  
-        #  Save report to file
+        #  Step 5: Save report to file
         print()
         save_report(results, iss_count, iss_names)
  
