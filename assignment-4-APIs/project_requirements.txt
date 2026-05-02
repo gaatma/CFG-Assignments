@@ -1,0 +1,10 @@
+# Python packages for CFG Data Science & ML
+# Install with: pip install -r requirements.txt
+
+numpy
+pandas
+matplotlib
+scikit-learn
+jupyter
+flask
+mysql.connector
