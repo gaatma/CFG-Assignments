@@ -8,3 +8,4 @@ scikit-learn
 jupyter
 flask
 mysql.connector
+dotenv
