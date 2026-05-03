@@ -16,7 +16,8 @@ evcs_threat_api/
 ├── db_utils.py     # Database connection and query helpers
 ├── config.py       # Database and Flask configuration (edit this first!)
 ├── main.py         # Client-side simulation — run to test the API
-├── schema.sql      # MySQL database and table setup
+├── evcs_security.sql      # MySQL database and table setup
+├── project_requirements.txt  # Python packages required to run this project
 └── README.md       # This file
 ```
 
@@ -40,7 +41,7 @@ pip install flask mysql-connector-python requests python-dotenv
 
 ### 3. Set up the database
 
-Open **DBeaver**, connect to your local MySQL server, and run the contents of `schema.sql`. This will:
+Open **DBeaver**, connect to your local MySQL server, and run the contents of `evcs_security.sql`. This will:
 
 - Create a database called `evcs_security`
 - Create the `threats` table
@@ -48,25 +49,19 @@ Open **DBeaver**, connect to your local MySQL server, and run the contents of `s
 Alternatively, from the MySQL CLI:
 
 ```bash
-mysql -u your_username -p < schema.sql
+mysql -u your_username -p < evcs_security.sql
 ```
 
 ### 4. Set up your credentials
 
-Copy `.env.example` to a new file called `.env` in the same directory:
+Create a new file called `.env` in the `assignment-4-APIs` folder with your real MySQL credentials:
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=your_mysql_username
+DB_PASSWORD=your_mysql_password
+DB_NAME=evcs_security
 
-```bash
-cp .env.example .env
-```
-
-Then open `.env` and fill in your real MySQL credentials:
-
-```
-DB_USER=root
-DB_PASSWORD=your_actual_password
-```
-
-> ⚠️ The `.env` file is listed in `.gitignore` and will NOT be pushed to GitHub. Your credentials stay on your machine. Share the `.env` file directly with your instructor for marking.
+> The `.env` file is listed in `.gitignore` and will NOT be pushed to GitHub.
 
 ---
 
@@ -192,8 +187,16 @@ You can test all endpoints in Postman:
 
 ---
 
-## Git & GitHub Submission
 
-1. Create a branch: `assignment-4-APIs`
-2. Commit all `.py` and `.sql` files
-3. Open a Pull Request against `main` with a title and description
+## API Testing — Postman Screenshots
+
+All three endpoints were tested using Postman with the Flask server running locally.
+
+### POST /report-threat — 201 Created
+![POST report-threat](screenshots/postman_post.png)
+
+### GET /threats — 200 OK
+![GET all threats](screenshots/postman_get_all.png)
+
+### GET /threats/<station_id> — 200 OK
+![GET by station](screenshots/postman_get_station.png)
