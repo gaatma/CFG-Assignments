@@ -7,11 +7,10 @@
 # To set up: copy .env.example → .env and fill in your values.
 # Install dependency: pip install python-dotenv
 # ------------------------------------------------------------
-
-import mysql.connector as connector
 import os
 from dotenv import load_dotenv
-load_dotenv(dotenv_path="../.env")  
+
+load_dotenv()  # finds .env in the same folder automatically 
 #Load environment variables from .env file
 
 DB_HOST     = os.getenv("DB_HOST", "localhost")
